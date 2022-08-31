@@ -56,7 +56,7 @@ export default function SignIn() {
 
         console.log(sendData);
 
-        axios.post('http://localhost:8000/essay-helpers/api/login.php', sendData).then((data) => {
+        axios.post('http://graduate-essay-helpers.com/api/login.php', sendData).then((data) => {
             if (data.status == '200') {
                 window.localStorage.setItem('email', data.Email);
                 window.localStorage.setItem('userName', data.first_name + ' ' + data.last_name);
